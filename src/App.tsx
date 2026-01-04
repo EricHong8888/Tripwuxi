@@ -19,6 +19,8 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/itinerary" element={<TravelItineraryPage />} />
         <Route path="/other" element={<div className="text-center text-xl">Other Page - Coming Soon</div>} />
+        {/* 确保所有未匹配的路径都重定向到首页 */}
+        <Route path="*" element={<Home />} />
       </Routes>
     </AuthContext.Provider>
   );
